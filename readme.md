@@ -105,6 +105,20 @@ python inference/genefacepp_infer.py --a2m_ckpt=checkpoints/audio2motion_vae --h
 - cd GeneFacePlusPlus
 - conda activate geneface
 export PYTHONPATH=./
-python inference/genefacepp_infer.py --a2m_ckpt=checkpoints/audio2motion_vae --head_ckpt= --torso_ckpt=checkpoints/motion2video_nerf/may_torso --drv_aud=data/raw/val_wavs/KENDALL_JENNER.wav --out_name=may_demo.mp4
+python inference/genefacepp_infer.py --a2m_ckpt=checkpoints/audio2motion_vae --head_ckpt= --torso_ckpt=checkpoints/motion2video_nerf/may_torso --drv_aud=data/raw/val_wavs/demo_audio.wav --out_name=may_demo_ru.mp4
 
 TODO: Make it work from script
+
+if error: std::is_same<long double, int>)
+          detected during instantiation of "_Ret __gnu_cxx::__stoa(_TRet (*)(const _CharT *, _CharT **, _Base...), const char *, const _CharT *, std::size_t *, _Base...) [with _TRet=long double, _Ret=long double, _CharT=wchar_t, _Base=<>]"
+/usr/include/c++/11/bits/basic_string.h(6785): here
+
+19 errors detected in the compilation of "/root/.cache/torch_extensions/py310_cu115/bias_act_plugin/b46266ff65f9fa53c32108953a1c6f16-nvidia-geforce-rtx-3070/bias_act.cu".
+ninja: build stopped: subcommand failed...
+
+REINSTALL TORCH AND SO ON
+
+
+
+TIME:
+Rendering time: 26.14952564239502 for demo_audio with raymarching_end_threshold = 0.05

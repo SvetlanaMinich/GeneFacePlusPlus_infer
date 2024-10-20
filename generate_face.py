@@ -1,11 +1,14 @@
 from inference.genefacepp_infer import GeneFace2Infer
+import time
+
+start = time.time()
 
 inp = {
             'a2m_ckpt': 'checkpoints/audio2motion_vae',
             'postnet_ckpt': '',
             'head_ckpt': '',
             'torso_ckpt': 'checkpoints/motion2video_nerf/may_torso',
-            'drv_audio_name': 'data/raw/val_wavs/KENDALL_JENNER.wav',
+            'drv_audio_name': 'data/raw/val_wavs/demo_audio.wav',
             'drv_pose': 'nearest',
             'blink_mode': 'none',
             'temperature': 0.2,
@@ -17,3 +20,4 @@ inp = {
             'low_memory_usage': 'store_true',
             }
 GeneFace2Infer.example_run(inp)
+print('     > Rendering time:', time.time() - start)
